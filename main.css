@@ -1,0 +1,109 @@
+:root {
+    /* 定义核心颜色：浅蓝色和深空黑 */
+    --neon-blue: #00d2ff;
+    --bright-white: #ffffff;
+    --dark-bg: #000000;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--bright-white);
+    font-family: 'Inter', 'LXGWWenKai', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* 图片容器样式 */
+.image-header {
+    width: 50%;
+    max-width: 600px; /* 控制图片最大宽度 */
+    margin-top: 40px;  /* 距离浏览器最顶部的距离 */
+    text-align: center;
+}
+
+.image-header img {
+    width: 30%;       /* 移动端自适应 */
+    height: auto;
+    border-radius: 8px;
+    
+}
+
+#display-container {
+    margin-top: 40px;  /* 距离图片的间距 */
+    min-height: 150px;
+    min-height: 100px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+    /* 核心样式：白字 + 蓝色外发光 */
+    color: var(--bright-white);
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px var(--neon-blue),
+        0 0 15px var(--neon-blue);
+        
+        
+    padding: 0 20px;
+    max-width: 900px;
+    letter-spacing: 2px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 20px;
+    font-size: 14px;
+    background: transparent;
+    color: var(--bright-white);
+    border: 0px ;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    /* 按钮也加上微弱的蓝色投影 */
+    text-shadow: 0 0 5px var(--neon-blue);
+    font-family: 'Inter', 'LXGWWenKai', sans-serif;
+}
+
+button:hover {
+    background: var(--bright-white);
+    color: var(--dark-bg);
+    box-shadow: 0 0 30px var(--neon-blue);
+    font-weight: bold;
+}
+
+/* 底部文字样式 */
+.footer-note {
+    position: fixed;
+    bottom: 20px;
+    font-size: 12px;
+    color: var(--bright-white); /* 半透明浅蓝色 */
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px var(--neon-blue);
+    
+  
+}
+
+@font-face {
+  font-family: 'LXGWWenKai';
+  src: url('./LXGWWenKai-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
